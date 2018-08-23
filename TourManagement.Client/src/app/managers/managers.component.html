@@ -1,0 +1,30 @@
+<a class="btn btn-primary" [routerLink]="['/manager-add']">
+  Add manager
+</a>
+<div class="row" style="margin: 0px;"> 
+  <table class='table' *ngIf='managers && managers.length'>
+          <thead>
+            <tr>            
+              <th>Id</th>
+              <th>Name</th>      
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let m of managers'>
+              <td>{{m.managerId}}</td>           
+              <td>{{m.name}}</td>
+              
+              <td> <a class="btn btn-primary" [routerLink]="['/manager-update', m.managerId]">
+                Edit
+              </a></td>
+              <td> <a class="btn btn-primary" [routerLink]="['/manager-detail', m.managerId]">
+                Detail
+              </a></td>
+              <td><button class="btn btn-sm btn-sm pull-right" (click)="deleteManager(m.managerId)">Delete</button></td>
+              <td><button class="btn btn-sm btn-sm pull-right" (click)="getManager(m.managerId)">Detail</button></td>
+              <td><button class="btn btn-sm btn-sm pull-right" (click)="updateManager(m)">Update</button></td>
+
+            </tr>
+          </tbody>
+        </table>
+</div>

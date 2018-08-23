@@ -1,0 +1,41 @@
+<div class="customers view indent">
+  <div class="container">  
+      <div class="col-xs-4 col-xs-offset-2">
+		    <div class="input-group">        
+                <input type="text" class="form-control" [(ngModel)]='search' name="search" placeholder="Search term...">
+                <span class="input-group-btn">
+                    <a class="btn btn-default"(click)="SearchClicked()" type="button"><span class="glyphicon glyphicon-search"></span></a>
+                </span>
+            </div>
+        </div>
+      <div class="row" style="margin: 0px;">
+          <table class='table'  *ngIf='users && users.length'>
+                  <thead>
+                    <tr>            
+                      <!-- <th>Id</th> -->
+                      <th>First name</th>
+                      <th>Last name</th>
+                      <th>Phone</th>    
+                      <th>Department</th>          
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor='let m of users'>
+                      <!-- <td>{{m.id}}</td> -->
+                      <td>{{m.firstName}}</td>           
+                      <td>{{m.lastName}}</td>
+                      <td>{{m.phone}}</td>                  
+                      <td>{{m.department.name}}</td>               
+                      <!-- <td> <a class="btn btn-primary" [routerLink]="['/user-edit', m.id]">
+                        Edit
+                      </a></td> -->
+                      <!-- <td><button class="btn btn-sm btn-sm pull-right" (click)="deleteCustomer(m.id)">Delete</button></td> -->
+                      <!-- <td><button class="btn btn-sm btn-sm pull-right" (click)="getManager(m.id)">Detail</button></td>
+                      <td><button class="btn btn-sm btn-sm pull-right" (click)="updateManager(m)">Update</button></td> -->         
+                    </tr>
+                  </tbody>
+                </table>
+        </div>        
+  </div>
+</div>
+
