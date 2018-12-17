@@ -38,8 +38,6 @@ import { EnsureAcceptHeaderInterceptor } from './shared/ensure-accept-header-int
 import { ShowSingleComponent } from './tours/shows/show-single/show-single.component';
 import { UsersComponent } from './users/users.component';
 import { LoginComponent } from './login/login.component';
-import { LogTestComponent } from './log-test/log-test.component';
-//import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +46,7 @@ import { LogTestComponent } from './log-test/log-test.component';
     CustomersComponent,CustomerEditComponent,//CustomersGridComponent,CustomerEditReactiveComponent,
     ShowsComponent, ShowAddComponent, ShowSingleComponent,
     TourDetailComponent,TourAddComponent,ToursComponent,TourUpdateComponent,
-    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent, LoginComponent, LogTestComponent//, LoginComponent
+    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent, LoginComponent
   ],
   imports: [
     BrowserModule,
