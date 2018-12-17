@@ -37,6 +37,9 @@ import { WriteOutJsonInterceptor } from './shared/write-out-json-interceptor';
 import { EnsureAcceptHeaderInterceptor } from './shared/ensure-accept-header-interceptor';
 import { ShowSingleComponent } from './tours/shows/show-single/show-single.component';
 import { UsersComponent } from './users/users.component';
+import { LoginComponent } from './login/login.component';
+import { LogTestComponent } from './log-test/log-test.component';
+//import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,7 @@ import { UsersComponent } from './users/users.component';
     CustomersComponent,CustomerEditComponent,//CustomersGridComponent,CustomerEditReactiveComponent,
     ShowsComponent, ShowAddComponent, ShowSingleComponent,
     TourDetailComponent,TourAddComponent,ToursComponent,TourUpdateComponent,
-    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent
+    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent, LoginComponent, LogTestComponent//, LoginComponent
   ],
   imports: [
     BrowserModule,

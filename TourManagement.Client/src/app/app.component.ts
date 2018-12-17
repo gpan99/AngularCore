@@ -7,5 +7,6 @@ import {  } from "automapper-ts";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'GP';  
+  title = 'GP';
+  IsAuthenicated = false;
 }
