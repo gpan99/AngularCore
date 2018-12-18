@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AboutComponent } from './about'; 
 import { UsersComponent} from './users';
-import { LoginComponent} from './login/login.component';
+//import { LoginComponent } from "./login/Login.component";
 import { ManagerComponent} from './managers';
 import { CustomersComponent} from './customers';
 import { CustomerEditComponent } from './customers/customer-edit.component';
@@ -18,7 +18,7 @@ import { ShowAddComponent } from './tours/shows/index';
 const routes: Routes = [
     // redirect root to the dasbhoard route
     { path: '', redirectTo: 'tours', pathMatch: 'full' },
-    { path: 'login', component: LoginComponent },
+   // { path: 'login', component: LoginComponent },
     { path: 'users', component: UsersComponent },
     { path: 'customers', component: CustomersComponent },
     { path: 'customer-edit/:id', component: CustomerEditComponent},  

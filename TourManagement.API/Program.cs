@@ -18,10 +18,11 @@ namespace TourManagement.API
             {
                 try
                 {
-                    var context = scope.ServiceProvider.GetService<TourManagementContext>();
-                    context.Database.EnsureCreated();
-                    context.Database.Migrate(); //toDO: there aleady a object band in DB
-                    context.EnsureSeedDataForContext(); // To Do: bug here
+                    // one time sedding deal
+                    //var context = scope.ServiceProvider.GetService<TourManagementContext>();
+                    //context.Database.EnsureCreated();
+                    //context.Database.Migrate(); //toDO: there aleady a object band in DB
+                    //context.EnsureSeedDataForContext(); // To Do: bug here
                 }
                 catch (System.Exception ex)
                 {

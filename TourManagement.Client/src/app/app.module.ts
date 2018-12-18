@@ -24,6 +24,8 @@ import {ToursComponent, TourAddComponent, TourDetailComponent,TourUpdateComponen
 
 import { ShowsComponent, ShowAddComponent } from './tours/shows';
 import { ManagerService } from './managers/shared/manager.service';
+import { LoginService } from './login/shared/login.service';
+
 import { UserService } from './users/shared/user.service';
 import { DataService } from './core/data.service';
 
@@ -37,7 +39,7 @@ import { WriteOutJsonInterceptor } from './shared/write-out-json-interceptor';
 import { EnsureAcceptHeaderInterceptor } from './shared/ensure-accept-header-interceptor';
 import { ShowSingleComponent } from './tours/shows/show-single/show-single.component';
 import { UsersComponent } from './users/users.component';
-import { LoginComponent } from './login/login.component';
+//import { LoginComponent } from "./login/Login.component";
 
 @NgModule({
   declarations: [
@@ -46,7 +48,7 @@ import { LoginComponent } from './login/login.component';
     CustomersComponent,CustomerEditComponent,//CustomersGridComponent,CustomerEditReactiveComponent,
     ShowsComponent, ShowAddComponent, ShowSingleComponent,
     TourDetailComponent,TourAddComponent,ToursComponent,TourUpdateComponent,
-    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent, LoginComponent
+    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent,// LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +73,7 @@ import { LoginComponent } from './login/login.component';
       useClass: HandleHttpErrorInterceptor,
       multi: true,
     },
-    GlobalErrorHandler, ErrorLoggerService, TourService, ManagerService, UserService,MasterDataService,DataService, ShowService, DatePipe],
+    GlobalErrorHandler, ErrorLoggerService, TourService, ManagerService, UserService,MasterDataService,DataService, ShowService,LoginService, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule {
