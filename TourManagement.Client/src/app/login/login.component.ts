@@ -10,7 +10,7 @@ import {Login} from "./shared/login.model";
 export class LoginComponent implements OnInit 
 {
   //constructor(private loginService: LoginService) { }
-  constructor(private dataService: LoginService){}
+  constructor(private loginService: LoginService){}
 
   errorMessage: string = "";
   public creds = {
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit
     }
     onLogin()
     {
-      this.dataService.login(this.creds);
+     // this.dataService.login(this.creds);
       
       console.log('username='+this.creds.username);
     }

@@ -39,7 +39,7 @@ import { WriteOutJsonInterceptor } from './shared/write-out-json-interceptor';
 import { EnsureAcceptHeaderInterceptor } from './shared/ensure-accept-header-interceptor';
 import { ShowSingleComponent } from './tours/shows/show-single/show-single.component';
 import { UsersComponent } from './users/users.component';
-//import { LoginComponent } from "./login/Login.component";
+import { LoginComponent } from "./login/Login.component";
 
 @NgModule({
   declarations: [
@@ -48,7 +48,7 @@ import { UsersComponent } from './users/users.component';
     CustomersComponent,CustomerEditComponent,//CustomersGridComponent,CustomerEditReactiveComponent,
     ShowsComponent, ShowAddComponent, ShowSingleComponent,
     TourDetailComponent,TourAddComponent,ToursComponent,TourUpdateComponent,
-    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent,// LoginComponent
+    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent, LoginComponent
   ],
   imports: [
     BrowserModule,

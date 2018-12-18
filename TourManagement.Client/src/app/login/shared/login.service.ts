@@ -25,13 +25,13 @@ export class LoginService extends BaseService {
 
     public login(creds) {
         console.log("login"+ creds.login);
-        return this.http.post("/account/createtoken", creds)
-            .map(response => {
-                // let tokenInfo = response.json();
-                // this.token = tokenInfo.token;
-                // this.tokenExpiration = tokenInfo.expiration;
-                return true;
-            });
+        // return this.http.post("/account/createtoken", creds)
+        //     .map(response => {
+        //         // let tokenInfo = response.json();
+        //         // this.token = tokenInfo.token;
+        //         // this.tokenExpiration = tokenInfo.expiration;
+        //         return true;
+        //     });
 
     }
 }
