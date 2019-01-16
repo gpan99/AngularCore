@@ -8,5 +8,5 @@ import {  } from "automapper-ts";
 })
 export class AppComponent {
   title = '';
-  IsAuthenicated = false;
+  IsAuthenicated = true;
 }
