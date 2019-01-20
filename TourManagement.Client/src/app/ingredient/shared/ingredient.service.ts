@@ -6,34 +6,33 @@ import 'rxjs/add/observable/throw';
 import 'rxjs/add/operator/map'; 
 import 'rxjs/add/operator/catch';
 import { BaseService } from '../../shared/base.service';
-import {Manager} from '../../shared/manager.model'
+import { Ingredient } from '../../shared/Ingredient.model'
 @Injectable()
-export class ManagerService extends BaseService {
-    //If you're on Angular 4.3 or higher you can use HttpClientModule. See data.service.ts.httpclient  
-    constructor(private http: HttpClient) {
+export class IngredientService extends BaseService {
+     constructor(private http: HttpClient) {
         super();
     }
-    getManagers(): Observable<Manager[]> {
-        return this.http.get<Manager[]>(`${this.apiUrl}/managers`);
+    getIngredients(): Observable<Ingredient[]> {
+        return this.http.get<Ingredient[]>(`${this.apiUrl}/ingredients`);
     }
-    getManager(id: string) : Observable<Manager> {
-        return this.http.get<Manager>(`${this.apiUrl}/managers` + '/' + id); 
+    getIngredient(id: string) : Observable<Ingredient> {
+        return this.http.get<Ingredient>(`${this.apiUrl}/ingredients` + '/' + id); 
         // .map((res: Response) => {
         //          let data = res.json();
         //     })                 
         // }
     }
-    updateManager(manager : Manager): Observable<any> {
-        return this.http.put(`${this.apiUrl}/managers` + '/' + manager.managerId, manager) 
+    updateIngredient(ingredient : Ingredient): Observable<any> {
+        return this.http.put(`${this.apiUrl}/ingredients` + '/' + ingredient.ingredientId, ingredient) 
                    .map((res: Response) => {
                        const data = res.json();
                    })                 
                 }
-    deleteManager(id : string): Observable<any> {
-         return this.http.delete(`${this.apiUrl}/managers` + '/' + id) 
+    deleteIngredient(id : string): Observable<any> {
+         return this.http.delete(`${this.apiUrl}/Ingredients` + '/' + id) 
                     .map((res: Response) => {
                                    const data = res.json();
                         })                 
                     }
-                }
-
+        
+}

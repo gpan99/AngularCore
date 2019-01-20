@@ -20,6 +20,9 @@ namespace TourManagement.API.Services
         public DbSet<Department> Departments { get; set; }
         public DbSet<User> Users { get; set; }
 
+        public DbSet<FoodItem> FoodItems { get; set; }
+        public DbSet<Ingredient> Ingredients { get; set; }
+
         private readonly IUserInfoService _userInfoService;
 
         public TourManagementContext(DbContextOptions<TourManagementContext> options,

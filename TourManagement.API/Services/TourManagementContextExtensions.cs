@@ -48,6 +48,16 @@ namespace TourManagement.API.Services
             };
             context.Users.AddRange(users);
             context.SaveChanges();
+            context.FoodItems.Add(new FoodItem() { Calories = 1000, Name = "Lasagne", Created = DateTime.Now });
+            context.FoodItems.Add(new FoodItem() { Calories = 1100, Name = "Hamburger", Created = DateTime.Now });
+            context.FoodItems.Add(new FoodItem() { Calories = 1200, Name = "Spaghetti", Created = DateTime.Now });
+            context.FoodItems.Add(new FoodItem() { Calories = 1300, Name = "Pizza", Created = DateTime.Now });
+            context.SaveChanges();
+
+            var foodItem = context.FoodItems.FirstOrDefault();
+            context.Add(new Ingredient() { FoodItem = foodItem, Quantity = 1, Weight = 2, Description = "meat ball" });
+            context.Add(new Ingredient() { FoodItem = foodItem, Quantity = 2, Weight = 3, Description = "suage ball" });
+            context.SaveChanges();
 
             // init seed data
             var managers = new List<Manager>()

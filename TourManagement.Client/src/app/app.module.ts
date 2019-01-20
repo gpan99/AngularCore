@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 
 import { AboutComponent } from './about';
+
 import { CustomersComponent} from './customers/customers.component'
 //import { CustomersGridComponent} from './customers/crouter.component'
 import { CustomerEditComponent} from './customers/customer-edit.component'
@@ -40,6 +41,10 @@ import { EnsureAcceptHeaderInterceptor } from './shared/ensure-accept-header-int
 import { ShowSingleComponent } from './tours/shows/show-single/show-single.component';
 import { UsersComponent } from './users/users.component';
 import { LoginComponent } from "./login/Login.component";
+import { IngredientComponent } from './ingredient/ingredient.component';
+import { IngredientAddComponent } from './ingredient/ingredient-add/ingredient-add.component';
+import { IngredientEditComponent } from './ingredient/ingredient-edit/ingredient-edit.component';
+import { IngredientDetailComponent } from './ingredient/ingredient-detail/ingredient-detail.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +53,9 @@ import { LoginComponent } from "./login/Login.component";
     CustomersComponent,CustomerEditComponent,//CustomersGridComponent,CustomerEditReactiveComponent,
     ShowsComponent, ShowAddComponent, ShowSingleComponent,
     TourDetailComponent,TourAddComponent,ToursComponent,TourUpdateComponent,
-    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent, UsersComponent, LoginComponent
+    ManagerComponent, ManagerUpdateComponent, ManagerAddComponent, ManagerDetailComponent,
+     UsersComponent, LoginComponent, 
+     IngredientComponent, IngredientAddComponent, IngredientEditComponent, IngredientDetailComponent
   ],
   imports: [
     BrowserModule,

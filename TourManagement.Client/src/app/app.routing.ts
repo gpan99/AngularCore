@@ -3,9 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about'; 
 import { UsersComponent} from './users';
 import { LoginComponent } from "./login/Login.component";
-import { ManagerComponent} from './managers';
+import { IngredientComponent} from './ingredient';
+import { IngredientAddComponent } from './ingredient/ingredient-add/ingredient-add.component';
+import { IngredientEditComponent } from './ingredient/ingredient-edit/ingredient-edit.component';
+
 import { CustomersComponent} from './customers';
 import { CustomerEditComponent } from './customers/customer-edit.component';
+import { ManagerComponent} from './managers';
 import { ManagerUpdateComponent} from './managers/manager-update/manager-update.component';
 import { ManagerAddComponent} from './managers/manager-add/manager-add.component';
 import { ManagerDetailComponent} from './managers/manager-detail/manager-detail.component';
@@ -20,6 +24,9 @@ const routes: Routes = [
     { path: '', redirectTo: 'tours', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'users', component: UsersComponent },
+    { path: 'ingredient', component: IngredientComponent },
+    { path: 'ingredient-add', component: IngredientAddComponent },
+    { path: 'ingredient-edit/:id', component: IngredientEditComponent},  
     { path: 'customers', component: CustomersComponent },
     { path: 'customer-edit/:id', component: CustomerEditComponent},  
     { path: 'managers', component: ManagerComponent },
